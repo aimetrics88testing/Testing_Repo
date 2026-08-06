@@ -1,0 +1,38 @@
+.profile-form {
+  max-width: 420px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1.5rem;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+}
+
+.profile-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.profile-form input {
+  padding: 0.7rem 0.85rem;
+  border: 1.5px solid var(--color-border);
+  border-radius: 8px;
+  background: #fff;
+  color: var(--color-ink);
+}
+
+.profile-form input:focus {
+  outline: 2px solid rgba(15, 107, 92, 0.35);
+  border-color: var(--color-teal);
+}
+
+.save-note {
+  margin: 0;
+  color: var(--color-teal);
+  font-weight: 600;
+}

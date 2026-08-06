@@ -1,0 +1,44 @@
+.care-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 1.25rem;
+}
+
+.care-panel {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.care-panel h2 {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+}
+
+.care-panel p {
+  color: var(--color-muted);
+}
+
+.faq-list li + li {
+  margin-top: 1.15rem;
+  padding-top: 1.15rem;
+  border-top: 1px solid var(--color-border);
+}
+
+.faq-list h3 {
+  font-family: var(--font-body);
+  font-size: 1.05rem;
+  margin-bottom: 0.35rem;
+}
+
+.faq-list p {
+  margin: 0;
+}
+
+@media (max-width: 720px) {
+  .care-grid {
+    grid-template-columns: 1fr;
+  }
+}
