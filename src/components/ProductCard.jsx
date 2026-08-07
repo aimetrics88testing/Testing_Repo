@@ -11,7 +11,7 @@ export default function ProductCard({ product }) {
       </div>
       <div className="product-body">
         <h3>{product.name}</h3>
-        <p className="product-price">${product.price.toFixed(2)}</p>
+        <p className="product-price">₹{product.price.toLocaleString('en-IN')}</p>
         <button type="button" className="btn btn-primary" onClick={() => addToCart(product)}>
           Add to Cart
         </button>

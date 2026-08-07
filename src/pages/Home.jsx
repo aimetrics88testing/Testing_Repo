@@ -13,7 +13,7 @@ export default function Home() {
           <p className="hero-brand">ShopEase</p>
           <h1>Shop smarter, live easier</h1>
           <p className="hero-sub">
-            Discover fashion, electronics, beauty, and daily essentials — all in one place.
+            Discover fashion, electronics, beauty, medicines, and daily essentials — all in one place.
           </p>
           <div className="hero-actions">
             <a href="#featured" className="btn btn-primary">

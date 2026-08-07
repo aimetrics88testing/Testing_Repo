@@ -33,7 +33,7 @@ export default function Cart() {
               <img src={item.image} alt={item.name} />
               <div className="cart-item-info">
                 <h3>{item.name}</h3>
-                <p>${item.price.toFixed(2)}</p>
+                <p>₹{item.price.toLocaleString('en-IN')}</p>
                 <div className="qty-controls">
                   <button
                     type="button"
@@ -53,7 +53,7 @@ export default function Cart() {
                 </div>
               </div>
               <div className="cart-item-side">
-                <p className="line-total">${(item.price * item.quantity).toFixed(2)}</p>
+                <p className="line-total">₹{(item.price * item.quantity).toLocaleString('en-IN')}</p>
                 <button
                   type="button"
                   className="remove-btn"
@@ -70,7 +70,7 @@ export default function Cart() {
           <h2>Order summary</h2>
           <div className="summary-row">
             <span>Subtotal</span>
-            <strong>${subtotal.toFixed(2)}</strong>
+            <strong>₹{subtotal.toLocaleString('en-IN')}</strong>
           </div>
           <p className="summary-note">Shipping and taxes calculated at checkout.</p>
           <button type="button" className="btn btn-primary btn-block">
