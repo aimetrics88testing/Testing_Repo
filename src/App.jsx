@@ -5,6 +5,7 @@ import Category from './pages/Category'
 import Cart from './pages/Cart'
 import Profile from './pages/Profile'
 import CustomerCare from './pages/CustomerCare'
+import Offers from './pages/Offers'
 
 export default function App() {
   return (
@@ -15,6 +16,7 @@ export default function App() {
         <Route path="cart" element={<Cart />} />
         <Route path="profile" element={<Profile />} />
         <Route path="customer-care" element={<CustomerCare />} />
+        <Route path="offers" element={<Offers />} />
       </Route>
     </Routes>
   )

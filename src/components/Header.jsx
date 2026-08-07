@@ -92,6 +92,10 @@ export default function Header() {
             )}
           </div>
 
+          <NavLink to="/offers" className="nav-link">
+            Offers
+          </NavLink>
+
           <NavLink to="/customer-care" className="nav-link">
             Customer Care
           </NavLink>
