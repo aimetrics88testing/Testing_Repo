@@ -9,6 +9,11 @@
   gap: 0.75rem;
 }
 
+.chatbot-container {
+  position: relative;
+  width: min(340px, calc(100vw - 2rem));
+}
+
 .chatbot-toggle {
   border: none;
   border-radius: 999px;
