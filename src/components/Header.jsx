@@ -1,22 +1,23 @@
 import { useEffect, useRef, useState } from 'react'
 import { Link, NavLink } from 'react-router-dom'
-import { categories } from '../data/products'
+import { categories, products } from '../data/products'
 import { useCart } from '../context/CartContext'
 import './Header.css'
 
 export default function Header() {
   const { itemCount } = useCart()
-  const [open, setOpen] = useState(false)
-  const dropdownRef = useRef(null)
+  const [openMenu, setOpenMenu] = useState(null)
+  const categoriesRef = useRef(null)
+  const productsRef = useRef(null)
 
   useEffect(() => {
     const handleClickOutside = (event) => {
-      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
-        setOpen(false)
-      }
+      const inCategories = categoriesRef.current?.contains(event.target)
+      const inProducts = productsRef.current?.contains(event.target)
+      if (!inCategories && !inProducts) setOpenMenu(null)
     }
     const handleEscape = (event) => {
-      if (event.key === 'Escape') setOpen(false)
+      if (event.key === 'Escape') setOpenMenu(null)
     }
     document.addEventListener('mousedown', handleClickOutside)
     document.addEventListener('keydown', handleEscape)
@@ -34,27 +35,56 @@ export default function Header() {
         </Link>
 
         <nav className="header-nav" aria-label="Main">
-          <div className="nav-item products-dropdown" ref={dropdownRef}>
+          <div className="nav-item products-dropdown" ref={categoriesRef}>
             <button
               type="button"
-              className={`nav-link dropdown-trigger${open ? ' is-open' : ''}`}
-              aria-expanded={open}
+              className={`nav-link dropdown-trigger${openMenu === 'categories' ? ' is-open' : ''}`}
+              aria-expanded={openMenu === 'categories'}
               aria-haspopup="true"
-              onClick={() => setOpen((prev) => !prev)}
+              onClick={() => setOpenMenu((prev) => (prev === 'categories' ? null : 'categories'))}
             >
-              Products
+              Categories
               <span className="chevron" aria-hidden="true" />
             </button>
-            {open && (
+            {openMenu === 'categories' && (
               <ul className="dropdown-menu" role="menu">
                 {categories.map((category) => (
                   <li key={category.slug} role="none">
                     <Link
                       to={`/category/${category.slug}`}
                       role="menuitem"
-                      onClick={() => setOpen(false)}
+                      onClick={() => setOpenMenu(null)}
                     >
                       {category.name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            )}
+          </div>
+
+          <div className="nav-item products-dropdown" ref={productsRef}>
+            <button
+              type="button"
+              className={`nav-link dropdown-trigger${openMenu === 'products' ? ' is-open' : ''}`}
+              aria-expanded={openMenu === 'products'}
+              aria-haspopup="true"
+              onClick={() => setOpenMenu((prev) => (prev === 'products' ? null : 'products'))}
+            >
+              Products
+              <span className="chevron" aria-hidden="true" />
+            </button>
+            {openMenu === 'products' && (
+              <ul className="dropdown-menu dropdown-menu-products" role="menu">
+                {products.map((product) => (
+                  <li key={product.id} role="none">
+                    <Link
+                      to={`/category/${product.category}`}
+                      role="menuitem"
+                      onClick={() => setOpenMenu(null)}
+                    >
+                      <span>{product.name}</span>
+                      <span className="dropdown-price">₹{product.price.toLocaleString('en-IN')}</span>
                     </Link>
                   </li>
                 ))}

@@ -106,6 +106,26 @@
   color: var(--color-teal-deep);
 }
 
+.dropdown-menu-products {
+  min-width: 280px;
+  max-height: min(70vh, 420px);
+  overflow-y: auto;
+}
+
+.dropdown-menu-products a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.dropdown-price {
+  flex-shrink: 0;
+  font-size: 0.85rem;
+  color: var(--color-muted);
+  font-weight: 600;
+}
+
 .cart-link {
   gap: 0.45rem;
 }
