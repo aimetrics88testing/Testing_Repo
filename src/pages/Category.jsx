@@ -29,7 +29,7 @@ export default function Category() {
         <h1>{category.name}</h1>
         <p>{products.length} products available</p>
       </div>
-      <ProductGrid products={products} />
+      <ProductGrid products={products} title={category.name} />
     </div>
   )
 }

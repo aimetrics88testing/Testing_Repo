@@ -49,7 +49,7 @@ export default function Home() {
           <h2>Featured picks</h2>
           <p>Handpicked favorites from across the store.</p>
         </div>
-        <ProductGrid products={featured} />
+        <ProductGrid products={featured} title="Featured picks" />
       </section>
     </div>
   )
