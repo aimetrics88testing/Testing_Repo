@@ -27,12 +27,12 @@
 }
 
 .profile-form input:focus {
-  outline: 2px solid rgba(15, 107, 92, 0.35);
-  border-color: var(--color-teal);
+  outline: 2px solid rgba(26, 92, 255, 0.35);
+  border-color: var(--color-accent);
 }
 
 .save-note {
   margin: 0;
-  color: var(--color-teal);
+  color: var(--color-accent);
   font-weight: 600;
 }

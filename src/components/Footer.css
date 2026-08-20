@@ -1,12 +1,12 @@
 .site-footer {
   margin-top: auto;
-  background: linear-gradient(180deg, #0f3f36 0%, #0a2f29 100%);
+  background: linear-gradient(180deg, #0c1929 0%, #07111c 100%);
   color: rgba(255, 255, 255, 0.88);
 }
 
 .footer-newsletter {
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  background: rgba(0, 0, 0, 0.12);
+  background: rgba(26, 92, 255, 0.12);
 }
 
 .footer-newsletter-inner {
@@ -56,7 +56,7 @@
 }
 
 .footer-newsletter-form input:focus {
-  outline: 2px solid var(--color-sand);
+  outline: 2px solid var(--color-coral);
   outline-offset: 1px;
 }
 
@@ -64,8 +64,8 @@
   padding: 0.7rem 1.15rem;
   border: none;
   border-radius: 8px;
-  background: var(--color-sand);
-  color: var(--color-ink);
+  background: var(--color-coral);
+  color: #fff;
   font-family: var(--font-body);
   font-weight: 600;
   font-size: 0.95rem;
@@ -90,7 +90,7 @@
   display: inline-block;
   font-family: var(--font-display);
   font-size: 1.45rem;
-  font-weight: 700;
+  font-weight: 800;
   color: #fff;
   text-decoration: none;
   margin-bottom: 0.75rem;
@@ -98,7 +98,7 @@
 
 .footer-brand:hover {
   text-decoration: none;
-  color: var(--color-sand-soft);
+  color: var(--color-coral-soft);
 }
 
 .footer-col h4 {
@@ -107,7 +107,7 @@
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  color: var(--color-sand);
+  color: var(--color-coral);
   margin: 0 0 0.95rem;
 }
 
