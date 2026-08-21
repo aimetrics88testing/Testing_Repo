@@ -7,3 +7,9 @@
 .main-content {
   flex: 1;
 }
+
+.chatbot-toggle.is-open{
+  bottom: 20px;
+  right: 20px;
+  transform: translate(0, 0);
+}
