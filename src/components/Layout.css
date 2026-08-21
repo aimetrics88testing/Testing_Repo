@@ -13,3 +13,9 @@
   right: 20px;
   transform: translate(0, 0);
 }
+
+.chatbot-container {
+  position: fixed;
+  top: 20px;
+  bottom: 20px;
+}
