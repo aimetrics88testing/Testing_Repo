@@ -1,62 +1,292 @@
-.about-story,
-.about-highlights,
-.about-cta {
-  margin-bottom: 2rem;
+.about-page {
+  padding-bottom: 3rem;
 }
 
-.about-story h2,
-.about-highlights h2,
-.about-cta h2 {
-  font-size: 1.35rem;
-  margin-bottom: 0.75rem;
+.about-hero {
+  position: relative;
+  overflow: hidden;
+  min-height: min(58vh, 480px);
+  display: flex;
+  align-items: flex-end;
+  background:
+    linear-gradient(125deg, rgba(12, 25, 41, 0.94) 0%, rgba(13, 63, 212, 0.72) 55%, rgba(255, 92, 58, 0.5) 100%),
+    url('https://images.unsplash.com/photo-1483985988355-763728e1935b?w=1600&h=900&fit=crop') center / cover;
+  animation: aboutHeroIn 0.75s ease;
 }
 
-.about-story p {
-  color: var(--color-muted);
-  max-width: 48rem;
+.about-hero-content {
+  position: relative;
+  z-index: 1;
+  width: min(100% - 2rem, var(--max-w));
+  margin: 0 auto;
+  padding: 3.75rem 0 3.25rem;
+  color: #fff;
+  max-width: 38rem;
 }
 
-.about-grid {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 1.25rem;
+.about-hero-brand {
+  font-family: var(--font-display);
+  font-size: clamp(2.1rem, 5.5vw, 3.25rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  margin: 0 0 0.4rem;
+  animation: aboutRise 0.7s ease 0.08s both;
 }
 
-.about-card {
-  background: var(--color-surface);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius);
-  padding: 1.35rem;
-  box-shadow: var(--shadow-sm);
+.about-hero-content h1 {
+  font-size: clamp(1.35rem, 2.8vw, 1.85rem);
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.95);
+  margin-bottom: 0.85rem;
+  animation: aboutRise 0.7s ease 0.16s both;
 }
 
-.about-card h3 {
-  font-family: var(--font-body);
+.about-hero-sub {
+  color: rgba(255, 255, 255, 0.84);
   font-size: 1.05rem;
-  margin-bottom: 0.5rem;
+  max-width: 36ch;
+  margin-bottom: 1.25rem;
+  animation: aboutRise 0.7s ease 0.24s both;
 }
 
-.about-card p {
-  margin: 0;
-  color: var(--color-muted);
-}
-
-.about-cta p {
-  color: var(--color-muted);
-}
-
-.about-actions {
+.about-hero-actions {
   display: flex;
   flex-wrap: wrap;
   gap: 0.75rem;
-  margin-top: 1rem;
+  animation: aboutRise 0.7s ease 0.32s both;
 }
 
-@media (max-width: 720px) {
-  .about-grid {
+.about-hero-actions .btn-primary {
+  background: var(--color-coral);
+  color: #fff;
+}
+
+.about-hero-actions .btn-primary:hover {
+  background: #e84a2a;
+}
+
+.about-hero-actions .btn-ghost {
+  border-color: rgba(255, 255, 255, 0.45);
+  color: #fff;
+}
+
+.about-hero-actions .btn-ghost:hover {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.about-section {
+  width: min(100% - 2rem, var(--max-w));
+  margin: 0 auto;
+  padding: 3rem 0 1rem;
+}
+
+.about-kicker {
+  margin: 0 0 0.45rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-accent-deep);
+}
+
+.about-kicker-light {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.about-mission {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
+  gap: 2.5rem;
+  align-items: center;
+  padding-top: 3.5rem;
+}
+
+.about-mission-copy h2 {
+  font-size: clamp(1.6rem, 3vw, 2.1rem);
+  margin-bottom: 1rem;
+}
+
+.about-mission-copy p {
+  color: var(--color-muted);
+  max-width: 40rem;
+}
+
+.about-mission-visual {
+  border-radius: var(--radius);
+  overflow: hidden;
+  min-height: 320px;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--color-border);
+  animation: aboutRise 0.8s ease 0.2s both;
+}
+
+.about-mission-visual img {
+  width: 100%;
+  height: 100%;
+  min-height: 320px;
+  object-fit: cover;
+}
+
+.about-pillars-head {
+  margin-bottom: 1.75rem;
+  max-width: 36rem;
+}
+
+.about-pillars-head h2 {
+  font-size: clamp(1.5rem, 2.8vw, 2rem);
+}
+
+.about-pillar-list {
+  display: grid;
+  gap: 0;
+  border-top: 1px solid var(--color-border);
+}
+
+.about-pillar {
+  display: grid;
+  grid-template-columns: 4rem minmax(0, 1fr);
+  gap: 1rem;
+  padding: 1.35rem 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.about-pillar-num {
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--color-coral);
+  line-height: 1.2;
+}
+
+.about-pillar h3 {
+  font-family: var(--font-body);
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 0.35rem;
+}
+
+.about-pillar p {
+  margin: 0;
+  color: var(--color-muted);
+  max-width: 42rem;
+}
+
+.about-presence {
+  padding-top: 2.5rem;
+}
+
+.about-presence-inner {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+  gap: 2rem;
+  align-items: center;
+  padding: 2rem;
+  border-radius: var(--radius);
+  background:
+    linear-gradient(135deg, rgba(13, 63, 212, 0.95), rgba(12, 25, 41, 0.92)),
+    var(--color-accent-deep);
+  color: #fff;
+  box-shadow: var(--shadow-sm);
+}
+
+.about-presence-inner h2 {
+  font-size: clamp(1.4rem, 2.6vw, 1.85rem);
+  margin-bottom: 0.65rem;
+}
+
+.about-presence-inner p {
+  color: rgba(255, 255, 255, 0.82);
+  margin: 0;
+  max-width: 34rem;
+}
+
+.about-presence-facts {
+  display: grid;
+  gap: 0.85rem;
+}
+
+.about-presence-facts li {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.about-presence-facts li:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.about-presence-facts strong {
+  font-size: 0.75rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.65);
+}
+
+.about-presence-facts span {
+  font-size: 1.05rem;
+  font-weight: 600;
+}
+
+.about-close {
+  text-align: center;
+  padding: 3.5rem 0 1rem;
+}
+
+.about-close h2 {
+  font-size: clamp(1.5rem, 2.8vw, 2rem);
+}
+
+.about-close p {
+  color: var(--color-muted);
+  margin-bottom: 1.25rem;
+}
+
+.about-close-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: center;
+}
+
+@keyframes aboutHeroIn {
+  from {
+    opacity: 0.6;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes aboutRise {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 820px) {
+  .about-mission,
+  .about-presence-inner {
     grid-template-columns: 1fr;
+  }
+
+  .about-mission-visual {
+    order: -1;
+    min-height: 240px;
+  }
+
+  .about-mission-visual img {
+    min-height: 240px;
+  }
+
+  .about-pillar {
+    grid-template-columns: 3rem minmax(0, 1fr);
   }
 }

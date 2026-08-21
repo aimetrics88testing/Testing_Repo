@@ -72,6 +72,13 @@
     0 4px 10px rgba(12, 25, 41, 0.14);
 }
 
+.chatbot-toggle.is-open{
+  filter: brightness(1.05);
+  transform: translateY(-1px);
+  box-shadow:
+    0 14px 32px rgba(26, 92, 255, 0.4),
+    0 4px 10px rgba(12, 25, 41, 0.14);
+}
 .chatbot-toggle.is-open {
   background: #0c1929;
 }
