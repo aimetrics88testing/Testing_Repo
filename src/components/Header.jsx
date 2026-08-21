@@ -79,7 +79,7 @@ export default function Header() {
                 {products.map((product) => (
                   <li key={product.id} role="none">
                     <Link
-                      to={`/category/${product.category}`}
+                      to={`/product/${product.id}`}
                       role="menuitem"
                       onClick={() => setOpenMenu(null)}
                     >
@@ -91,6 +91,10 @@ export default function Header() {
               </ul>
             )}
           </div>
+
+          <NavLink to="/about" className="nav-link">
+            About
+          </NavLink>
 
           <NavLink to="/offers" className="nav-link">
             Offers
@@ -105,6 +109,13 @@ export default function Header() {
             {itemCount > 0 && <span className="cart-badge">{itemCount}</span>}
           </NavLink>
         </nav>
+
+        <NavLink to="/profile" className="profile-link" aria-label="Profile">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" strokeWidth="1.8">
+            <circle cx="12" cy="8" r="3.5" />
+            <path d="M5 19.5c1.8-3.2 4.2-4.8 7-4.8s5.2 1.6 7 4.8" strokeLinecap="round" />
+          </svg>
+        </NavLink>
       </div>
     </header>
   )

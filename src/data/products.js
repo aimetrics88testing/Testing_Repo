@@ -166,6 +166,10 @@ export function getCategoryBySlug(slug) {
   return categories.find((c) => c.slug === slug)
 }
 
+export function getProductById(id) {
+  return products.find((p) => p.id === Number(id))
+}
+
 export function getProductsByCategory(slug) {
   return products.filter((p) => p.category === slug)
 }

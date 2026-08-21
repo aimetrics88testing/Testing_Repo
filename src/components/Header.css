@@ -144,6 +144,26 @@
   font-weight: 700;
 }
 
+.profile-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  color: var(--color-accent-deep);
+  border: 1.5px solid rgba(26, 92, 255, 0.25);
+  flex-shrink: 0;
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.profile-link:hover,
+.profile-link.active {
+  background: rgba(26, 92, 255, 0.1);
+  border-color: var(--color-accent);
+  text-decoration: none;
+}
+
 @keyframes dropdownIn {
   from {
     opacity: 0;
@@ -167,5 +187,9 @@
     width: 100%;
     margin-left: 0;
     justify-content: flex-start;
+  }
+
+  .profile-link {
+    margin-left: auto;
   }
 }

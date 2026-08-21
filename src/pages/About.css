@@ -1,0 +1,62 @@
+.about-story,
+.about-highlights,
+.about-cta {
+  margin-bottom: 2rem;
+}
+
+.about-story h2,
+.about-highlights h2,
+.about-cta h2 {
+  font-size: 1.35rem;
+  margin-bottom: 0.75rem;
+}
+
+.about-story p {
+  color: var(--color-muted);
+  max-width: 48rem;
+}
+
+.about-grid {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.25rem;
+}
+
+.about-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 1.35rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.about-card h3 {
+  font-family: var(--font-body);
+  font-size: 1.05rem;
+  margin-bottom: 0.5rem;
+}
+
+.about-card p {
+  margin: 0;
+  color: var(--color-muted);
+}
+
+.about-cta p {
+  color: var(--color-muted);
+}
+
+.about-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+@media (max-width: 720px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+}

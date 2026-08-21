@@ -107,7 +107,7 @@ export default function Footer() {
           <h4>Company</h4>
           <ul>
             <li>
-              <a href="#about">About ShopEase</a>
+              <Link to="/about">About ShopEase</Link>
             </li>
             <li>
               <a href="#careers">Careers</a>
