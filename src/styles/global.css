@@ -1,19 +1,19 @@
 :root {
-  --color-bg: #e8f1ef;
-  --color-bg-soft: #f3f8f6;
+  --color-bg: #e8edf5;
+  --color-bg-soft: #f4f6fb;
   --color-surface: #ffffff;
-  --color-ink: #14342b;
-  --color-muted: #4d6a61;
-  --color-teal: #0f6b5c;
-  --color-teal-deep: #0a4f44;
-  --color-sand: #d4a574;
-  --color-sand-soft: #f0dfc8;
-  --color-border: rgba(20, 52, 43, 0.12);
-  --color-danger: #9b3b2e;
-  --shadow-sm: 0 8px 24px rgba(20, 52, 43, 0.08);
-  --radius: 12px;
-  --font-display: 'Fraunces', Georgia, serif;
-  --font-body: 'Source Sans 3', 'Segoe UI', sans-serif;
+  --color-ink: #0c1929;
+  --color-muted: #5a6b7d;
+  --color-accent: #1a5cff;
+  --color-accent-deep: #0d3fd4;
+  --color-coral: #ff5c3a;
+  --color-coral-soft: #ffe3db;
+  --color-border: rgba(12, 25, 41, 0.1);
+  --color-danger: #c0392b;
+  --shadow-sm: 0 10px 28px rgba(12, 25, 41, 0.08);
+  --radius: 14px;
+  --font-display: 'Syne', 'Segoe UI', sans-serif;
+  --font-body: 'DM Sans', 'Segoe UI', sans-serif;
   --header-h: 72px;
   --max-w: 1120px;
 }
@@ -34,9 +34,9 @@ body {
   font-family: var(--font-body);
   color: var(--color-ink);
   background:
-    radial-gradient(1200px 500px at 10% -10%, rgba(212, 165, 116, 0.28), transparent 55%),
-    radial-gradient(900px 480px at 95% 5%, rgba(15, 107, 92, 0.18), transparent 50%),
-    linear-gradient(180deg, var(--color-bg) 0%, var(--color-bg-soft) 45%, #eef4f2 100%);
+    radial-gradient(1100px 520px at 8% -8%, rgba(26, 92, 255, 0.16), transparent 55%),
+    radial-gradient(900px 480px at 96% 0%, rgba(255, 92, 58, 0.14), transparent 50%),
+    linear-gradient(180deg, var(--color-bg) 0%, var(--color-bg-soft) 48%, #eef1f8 100%);
   line-height: 1.5;
 }
 
@@ -59,7 +59,7 @@ p {
 }
 
 a {
-  color: var(--color-teal-deep);
+  color: var(--color-accent-deep);
   text-decoration: none;
 }
 
@@ -121,7 +121,7 @@ input {
   justify-content: center;
   gap: 0.4rem;
   border: 1.5px solid transparent;
-  border-radius: 999px;
+  border-radius: 10px;
   padding: 0.7rem 1.35rem;
   cursor: pointer;
   font-weight: 600;
@@ -133,23 +133,23 @@ input {
 }
 
 .btn-primary {
-  background: var(--color-teal);
+  background: var(--color-accent);
   color: #fff;
 }
 
 .btn-primary:hover {
-  background: var(--color-teal-deep);
+  background: var(--color-accent-deep);
   text-decoration: none;
 }
 
 .btn-ghost {
   background: transparent;
-  border-color: rgba(15, 107, 92, 0.35);
-  color: var(--color-teal-deep);
+  border-color: rgba(26, 92, 255, 0.35);
+  color: var(--color-accent-deep);
 }
 
 .btn-ghost:hover {
-  background: rgba(15, 107, 92, 0.08);
+  background: rgba(26, 92, 255, 0.08);
   text-decoration: none;
 }
 

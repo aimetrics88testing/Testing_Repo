@@ -11,12 +11,12 @@
 
 .product-card:hover {
   transform: translateY(-3px);
-  box-shadow: 0 14px 32px rgba(20, 52, 43, 0.12);
+  box-shadow: 0 16px 36px rgba(12, 25, 41, 0.12);
 }
 
 .product-image-wrap {
   aspect-ratio: 1;
-  background: #dfeae6;
+  background: #dce4f2;
   overflow: hidden;
 }
 
@@ -49,7 +49,7 @@
 .product-price {
   margin: 0;
   font-weight: 700;
-  color: var(--color-teal-deep);
+  color: var(--color-accent-deep);
   font-size: 1.05rem;
 }
 
